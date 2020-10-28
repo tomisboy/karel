@@ -1,0 +1,42 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+F7 = onBeeper();
+F8 = beeperAhead()
+F9 = leftIsClear()
+F10= frontIsClear()
+F11= rightIsClear()
+*/
+
+void findTeddyBear()
+{
+    while(!onBeeper())
+    {
+        while(frontIsClear() && !onBeeper())
+        {
+            if(onBeeper())
+            {
+                //Schleife wird beendet    
+            }
+            else{
+                moveForward(); 
+            }    
+        }
+        turnLeft();      
+    } 
+    pickBeeper();   
+}
+
+
+
+
+
+
+
+
+
+

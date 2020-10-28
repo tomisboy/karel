@@ -1,0 +1,50 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+F7 = onBeeper();
+F8 = beeperAhead()
+F9 = leftIsClear()
+F10= frontIsClear()
+F11= rightIsClear()
+*/
+
+void vor()
+{
+    while(!rightIsClear() && frontIsClear()){
+        moveForward();  
+    }
+}
+void huerde()
+{
+    turnRight();
+    moveForward();
+    turnRight();
+    moveForward();
+}
+
+void jumpTheHurdles()
+{
+    
+    while(!onBeeper()){
+        turnLeft();
+        vor();
+        huerde();
+        vor();
+        turnLeft();
+        
+        if(onBeeper()){
+            //warten bis man wieder zu while kommt
+        }
+        else
+        {
+        if(frontIsClear()){
+            moveForward();
+        }
+    }  
+}
+ pickBeeper();
+}

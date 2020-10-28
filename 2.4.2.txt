@@ -1,0 +1,225 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+F7 = onBeeper();
+F8 = beeperAhead()
+F9 = leftIsClear()
+F10= frontIsClear()
+F11= rightIsClear()
+*/
+void eins()
+{
+    moveForward();
+    turnAround();
+    moveForward();
+    pickBeeper(); 
+    turnLeft();
+    moveForward();
+    turnLeft();   
+}
+void zwei()
+{
+    moveForward();
+    turnAround();
+    repeat(2){
+        moveForward();
+        pickBeeper(); 
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+}
+void drei()
+{
+    moveForward();
+    turnAround();
+    repeat(3){
+        moveForward();
+        pickBeeper(); 
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+}
+void vier()
+{
+    moveForward();
+    turnAround();
+    repeat(4){
+        moveForward();
+        pickBeeper(); 
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+}
+void fuenf()
+{
+    moveForward();
+    turnAround();
+    repeat(5){
+        moveForward();
+        pickBeeper(); 
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+}
+
+////
+
+
+void sechs()
+{
+    repeat(4){
+        if (beeperAhead())
+        {
+            moveForward();
+        }
+        else
+        {
+            moveForward();
+            dropBeeper();
+        }
+    } 
+    turnAround();
+    repeat(9){
+        moveForward();
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+}
+void sieben()
+{
+    repeat(3){
+        if (beeperAhead())
+        {
+            moveForward();
+        }
+        else
+        {
+            moveForward();
+            dropBeeper();
+        }
+    } 
+    turnAround();
+    repeat(9){
+        moveForward();
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+} 
+
+
+void acht()
+{
+    repeat(2){
+        if (beeperAhead())
+        {
+            moveForward();
+        }
+        else
+        {
+            moveForward();
+            dropBeeper();
+        }
+    } 
+    turnAround();
+    repeat(9){
+        moveForward();
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+} 
+
+void neun()
+{
+    if (beeperAhead())
+    {
+        moveForward();
+    }
+    else
+    {
+        moveForward();
+        dropBeeper();
+    }
+    turnAround();
+    repeat(9){
+        moveForward();
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+} 
+
+
+void zehn()
+{
+    
+    turnAround();
+    repeat(9){
+        moveForward();
+    }
+    turnLeft();
+    moveForward();
+    turnLeft();   
+} 
+
+
+
+
+
+
+
+void quantize()
+{
+    turnLeft();
+    
+    
+    while(beeperAhead()){
+        if(beeperAhead())
+        {moveForward();
+            if(beeperAhead())
+            {moveForward();
+                if(beeperAhead())
+                {moveForward();
+                    if(beeperAhead())
+                    {moveForward();
+                        if(beeperAhead())
+                        {moveForward(); 
+                            if(beeperAhead())
+                            {moveForward();
+                                if(beeperAhead())
+                                {moveForward();
+                                    if(beeperAhead())
+                                    {moveForward();
+                                        if(beeperAhead())
+                                        {moveForward(); 
+                                            if(beeperAhead())
+                                            {moveForward();     
+                                            }
+                                            else{zehn();}   
+                                        }else{neun();}
+                                    }else{acht();}
+                                }else{sieben();}
+                            }else{sechs();}
+                        }else{fuenf();}
+                    }else{vier();}
+                }else{drei();}
+            }else{zwei();}
+        }else{eins();}
+    }
+}
+
+
+
+
+
+
