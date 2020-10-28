@@ -1,0 +1,86 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+F7 = onBeeper();
+F8 = beeperAhead()
+F9 = leftIsClear()
+F10= frontIsClear()
+F11= rightIsClear()
+*/
+void diag()
+{
+    turnRight();
+    moveForward();
+    turnLeft();
+    moveForward();   
+}
+
+
+
+
+
+void rechtsnachlinks()
+{
+    turnRight();
+    moveForward();
+    turnLeft();
+    moveForward();
+    moveForward();
+    turnLeft();
+    moveForward();
+    moveForward();
+    turnLeft();
+    moveForward();
+}
+
+void linksnachrechts()
+{
+    turnRight();
+    moveForward();
+    turnLeft();
+    turnAround();
+    moveForward();
+    
+}
+
+void pick()
+{
+    repeat(7)
+    {
+        if(onBeeper())
+        {
+            pickBeeper();
+        }
+        else{
+            diag();
+        }
+    }
+}
+
+void harvestTheField()
+{
+    moveForward();
+    pick();
+    rechtsnachlinks();
+    pick();
+    linksnachrechts();
+    pick();
+    rechtsnachlinks();
+    pick();
+}   
+/*
+
+turnRight();
+moveForward();
+turnLeft();
+moveForward();
+moveForward();
+turnLeft();
+moveForward();
+moveForward();
+turnLeft();
+}
