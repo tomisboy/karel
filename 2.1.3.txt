@@ -16,10 +16,9 @@ F11= rightIsClear()
 
 
 
-void followTheSeeds()
+void cleanTheTunnels()
 {
     
-    pickBeeper();
     turnLeft();
     
     
@@ -28,10 +27,10 @@ void followTheSeeds()
     {
         
     
-    while(beeperAhead()){
-        
-        moveForward();
+    while(onBeeper()){
         pickBeeper();
+        moveForward();
+        
     }   
     turnAround();
     while(frontIsClear()){

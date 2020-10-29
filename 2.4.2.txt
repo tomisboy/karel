@@ -183,7 +183,7 @@ void quantize()
     turnLeft();
     
     
-    while(beeperAhead()){
+    while(onBeeper()){
         if(beeperAhead())
         {moveForward();
             if(beeperAhead())
