@@ -12,7 +12,7 @@ F10= frontIsClear()
 F11= rightIsClear()
 */
 
-aaa
+
 
 
 
@@ -21,41 +21,63 @@ void solveTheMaze (){
     
     
     
-    while (!onBeeper())
+    
+    while( !onBeeper() )
     {
         
-        if(onBeeper()) { 
-        }
-        if(rightIsClear()){
-            turnRight();
+        
+        
+        
+        while((frontIsClear() && !rightIsClear())  && frontIsClear() && !leftIsClear() && !onBeeper())
+        {
             moveForward();
         }
-        if(leftIsClear()){
+        
+        
+        
+        //Kreuzung
+        if(leftIsClear() && rightIsClear()  &&  !onBeeper() )
+        {
             turnLeft();
             moveForward();
         }
         
-        if(!frontIsClear() && !leftIsClear()  && !rightIsClear() ){
-            turnAround();
+        if(rightIsClear()&&frontIsClear()  &&    !onBeeper())
+        {
+            moveForward();
         }
         
-        if(frontIsClear()){
+        
+        if(rightIsClear() &&frontIsClear() &&   !onBeeper() ){
+       
             moveForward();
+        }
+        
+        
+        
+        if(rightIsClear() &&   !onBeeper() ){
+            turnRight();
+            moveForward();
+        }
+        if(leftIsClear() &&   !onBeeper() ){
+            turnLeft();
+            moveForward();
+        }
+        
+        if (!rightIsClear() && !leftIsClear() && !frontIsClear()   && !onBeeper() ){
+            turnAround();
             
         }
         
-        
-        //nicht ganz richtig funktioniert nur,
-        // wenn das letzte IF auch an der letzten stelle ist
-        
-        
-    } 
+    }  
+    if(beeperAhead())
+    {
+        moveForward();
+    }
+    
     pickBeeper();
+    
 }
-
-
-
-
 
 
 
