@@ -53,7 +53,7 @@ void drei(){
 
 
 
-void fetchTheStars (){
+void fetchTheStars(){
     turnLeft();
     repeat(10)
     {
